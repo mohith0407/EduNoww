@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Layout from "../Layout/Layout";
-import heroPng from "../assets/images/Home.jpeg";
+import heroPng from "../assets/images/Hero.jpeg";
 
 export default function HomePage() {
   return (

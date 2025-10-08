@@ -1,30 +1,30 @@
-import React from "react";
-
+import React, { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./Pages/HomePage";
-import AboutUs from "./Pages/About";
-import NotFound from "./Pages/NotFound";
-import Signup from "./Pages/Signup";
-import Login from "./Pages/Login";
-import ChangePassword from "./Pages/Password/ChangePassword"
-import ForgotPassword from "./Pages/Password/ForgotPassword";
-import ResetPassword from "./Pages/Password/ResetPassword";
-import CourseList from "./Pages/Course/CourseList";
-import Contact from "./Pages/Contact";
-import Denied from "./Pages/Denied";
-import CourseDescription from "./Pages/Course/CourseDescription";
 
-import RequireAuth from "./Components/auth/RequireAuth";
-import CreateCourse from "./Pages/Course/CreateCourse";
-import Profile from "./Pages/User/Profile";
-
-import DisplayLecture from "./Pages/Dashboard/DisplayLecture";
-import AddLecture from "./Pages/Dashboard/AddLecture";
-import AdminDashboard from "./Pages/Dashboard/AdminDashboard";
+// 🔹 Lazy load all your pages
+const HomePage = lazy(() => import("./Pages/HomePage"));
+const AboutUs = lazy(() => import("./Pages/About"));
+const NotFound = lazy(() => import("./Pages/NotFound"));
+const Signup = lazy(() => import("./Pages/Signup"));
+const Login = lazy(() => import("./Pages/Login"));
+const ChangePassword = lazy(() => import("./Pages/Password/ChangePassword"));
+const ForgotPassword = lazy(() => import("./Pages/Password/ForgotPassword"));
+const ResetPassword = lazy(() => import("./Pages/Password/ResetPassword"));
+const CourseList = lazy(() => import("./Pages/Course/CourseList"));
+const Contact = lazy(() => import("./Pages/Contact"));
+const Denied = lazy(() => import("./Pages/Denied"));
+const CourseDescription = lazy(() => import("./Pages/Course/CourseDescription"));
+const RequireAuth = lazy(() => import("./Components/auth/RequireAuth"));
+const CreateCourse = lazy(() => import("./Pages/Course/CreateCourse"));
+const Profile = lazy(() => import("./Pages/User/Profile"));
+const DisplayLecture = lazy(() => import("./Pages/Dashboard/DisplayLecture"));
+const AddLecture = lazy(() => import("./Pages/Dashboard/AddLecture"));
+const AdminDashboard = lazy(() => import("./Pages/Dashboard/AdminDashboard"));
 
 function App() {
   return (
-    <>
+    // 🔸 Suspense shows a fallback loader until components are fetched
+    <Suspense fallback={<div className="text-center mt-10">Loading...</div>}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutUs />} />
@@ -62,7 +62,7 @@ function App() {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </>
+    </Suspense>
   );
 }
 

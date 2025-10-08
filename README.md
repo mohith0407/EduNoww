@@ -14,26 +14,6 @@
 
 ---
 
-## 🚀 Features
-
-### 👨‍🏫 Instructor Panel
-- Create and manage courses
-- Upload video lectures, PDFs, and resources
-- View enrolled students
-
-### 👨‍🎓 Student Panel
-- Register/login and enroll in courses
-- Watch video lectures
-- Track progress and download certificates (future feature)
-
-### 🧾 Course Management
-- Pagination for course lists
-
-### ⚙️ Admin Features
-- View all users and courses
-- Control user roles and permissions
-
----
 
 ## 🛡️ Security
 

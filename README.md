@@ -1,6 +1,6 @@
 # EduNoww App – Learning Management System (LMS)
 
-**EduNoww App** is a full-featured Learning Management System (LMS) developed using the **MERN Stack** — MongoDB, Express.js, React.js, and Node.js. It is designed to streamline online learning, course management, and student-instructor interaction.
+**EduNoww App** is a full-featured Learning Management System (LMS) developed using the **MERN Stack** — MongoDB, Express.js, React.js, and Node.js. It is designed to streamline online learning, course management, and student interaction.
 
 ---
 
@@ -19,7 +19,7 @@
 
 - Passwords are securely hashed using **bcrypt**
 - API protected using **JWT**
-- Role-based access control: `admin`, `instructor`, `student`
+- Role-based access control: `admin`, `student`
 
 
 
@@ -105,7 +105,7 @@ backend/
 ```
 ## 🎯 Objectives
 
-- Centralize online education for students and teachers
+- Centralize online education for students
 - Streamline scheduling and access to learning materials
 - Offer an engaging and scalable educational platform
 
@@ -113,13 +113,12 @@ backend/
 
 ## 🧠 Future Enhancements
 
-- Live class support via Zoom/WebRTC
-- Certificate auto-generation
-- Leaderboards and gamification
-- Messaging system for students and instructors
+- Student-instructor interaction
+- chatBot system
+- More personalised UI
 
 ---
 
 ## 📝 Conclusion
 
-**EduNoww App** provides an effective solution for digital learning, combining robust backend support with a user-friendly frontend. Designed to grow with the institution, it aims to be a scalable and impactful LMS platform.
+**EduNoww App** provides an effective solution for digital learning, combining robust backend support with a user-friendly frontend. It aims to be a scalable and impactful LMS platform.

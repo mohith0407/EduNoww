@@ -10,7 +10,7 @@
 - **Backend:** Node.js with Express.js
 - **Database:** MongoDB
 - **Authentication:** JWT (JSON Web Tokens)
-- **State Management:** Context API
+- **State Management:** Redux
 
 ---
 

@@ -90,7 +90,7 @@ export default function ChangePassword() {
           <p className="text-center font-inter text-gray-500 dark:text-slate-300">
             Not Remember ?{" "}
             <Link
-              to="/reset"
+              to="/user/profile/reset-password"
               className="link text-blue-600 font-lato cursor-pointer"
             >
               {" "}

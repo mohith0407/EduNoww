@@ -10,7 +10,8 @@ import InputBox from "../Components/InputBox/InputBox";
 export default function Signup() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  // Specific regex for enforcing @gmail.com suffix
+  const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
   const [previewImage, setPreviewImage] = useState("");
 
   const [isLoading, setIsLoading] = useState(false);
@@ -57,6 +58,11 @@ export default function Signup() {
     // checking name field length
     if (signupData.fullName.length < 3) {
       toast.error("Name should be atleast of 3 characters");
+      return;
+    }
+    // 3. GMAIL-ONLY Email Validation
+    if (!signupData.email.match(gmailRegex)) {
+      toast.error("Invalid email. Only @gmail.com addresses are allowed.");
       return;
     }
     // checking valid email

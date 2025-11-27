@@ -9,7 +9,7 @@ import InputBox from "../Components/InputBox/InputBox";
 export default function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  
   const [isLoading, setIsLoading] = useState(false);
   const [loginData, setLoginData] = useState({
     email: "",

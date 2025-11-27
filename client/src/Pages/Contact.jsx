@@ -8,6 +8,8 @@ import Layout from "../Layout/Layout";
 
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
+   const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+ 
   const [userInput, setUserInput] = useState({
     name: "",
     email: "",
@@ -28,7 +30,10 @@ export default function Contact() {
       toast.error("All fields are mandatory");
       return;
     }
-
+     if (!userInput.email.match(gmailRegex)) {
+      toast.error("Invalid email. Only @gmail.com addresses are allowed.");
+      return;
+    }
     if (!isEmail(userInput.email)) {
       toast.error("Invalid email");
       return;

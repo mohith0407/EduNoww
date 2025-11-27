@@ -1,7 +1,6 @@
-import React, { Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 
-// 🔹 Lazy load all your pages
 const HomePage = lazy(() => import("./Pages/HomePage"));
 const AboutUs = lazy(() => import("./Pages/About"));
 const NotFound = lazy(() => import("./Pages/NotFound"));
@@ -23,7 +22,6 @@ const AdminDashboard = lazy(() => import("./Pages/Dashboard/AdminDashboard"));
 
 function App() {
   return (
-    // 🔸 Suspense shows a fallback loader until components are fetched
     <Suspense fallback={<div className="text-center mt-10">Loading...</div>}>
       <Routes>
         <Route path="/" element={<HomePage />} />

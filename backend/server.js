@@ -1,7 +1,6 @@
 import app from "./app.js";
 const PORT = process.env.PORT;
 import {v2 as cloudinary} from 'cloudinary';
-import Razorpay from "razorpay"; 
          
 // cloudinary configuration
 cloudinary.config({ 

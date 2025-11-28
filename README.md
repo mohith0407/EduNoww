@@ -4,7 +4,7 @@
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 
 | Domain | Technologies |
 | :--- | :--- |
@@ -16,7 +16,7 @@
 
 ---
 
-## 🔄 Application Workflow
+## Application Workflow
 
 ### 1. User Flow
 The student journey from authentication to content consumption.

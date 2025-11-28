@@ -1,109 +1,59 @@
-# EduNoww App – Learning Management System (LMS)
+# 🎓 EduNoww – Learning Management System (LMS)
 
-**EduNoww App** is a full-featured Learning Management System (LMS) developed using the **MERN Stack** — MongoDB, Express.js, React.js, and Node.js. It is designed to streamline online learning, course management, and student interaction.
+**EduNoww** is a scalable Learning Management System built on the **MERN Stack**. It is designed to bridge the gap between instructors and students through a seamless, interactive course delivery platform.
 
 ---
 
 ## 💻 Tech Stack
 
-- **Frontend:** React.js with Tailwind CSS
-- **Backend:** Node.js with Express.js
-- **Database:** MongoDB
-- **Authentication:** JWT (JSON Web Tokens)
-- **State Management:** Redux
+| Domain | Technologies |
+| :--- | :--- |
+| **Frontend** | React.js, Tailwind CSS, Vite |
+| **Backend** | Node.js, Express.js |
+| **Database** | MongoDB (Mongoose) |
+| **State Management** | Redux Toolkit |
+| **Auth** | JWT (JSON Web Tokens) |
 
 ---
 
+## 🔄 Application Workflow
 
-## 🛡️ Security
+### 1. User Flow
+The student journey from authentication to content consumption.
+![User Flow](user-flow.png)
 
-- Passwords are securely hashed using **bcrypt**
-- API protected using **JWT**
-- Role-based access control: `admin`, `student`
+### 2. Admin Flow
+The administrative process for secure login, dashboard navigation, and course content creation.
+![Admin Flow](admin-flow.png)
 
+---
 
+## 📂 Project Architecture
 
-## 📂 Project Folder Structure
-```plaintext
-### Root Directory
+```text
 edunoww-app/
 │
-├── client/ # React frontend
-├── server/ # Express backend
-├── .env # Environment variables
-├── package.json # Root-level dependencies
-└── README.md
-
-### Frontend – `client/`
-client/
-├── public/
-│   └── index.html                    # Root HTML template
+├── client/                     # Frontend Application (React + Vite)
+│   ├── public/                 # Static assets
+│   ├── src/
+│   │   ├── Components/         # Reusable UI elements (Buttons, Cards)
+│   │   ├── Layout/             # Structural components (Navbar, Sidebar)
+│   │   ├── Pages/              # Page-level views (Login, Dashboard)
+│   │   ├── Redux/              # Global State (Slices & Store)
+│   │   ├── Helpers/            # Utilities (Formatters, Validators)
+│   │   └── Constants/          # App-wide static strings/configs
+│   └── [Config Files]          # Tailwind, Vite, & PostCSS configs
 │
-├── src/
-│   ├── assets/
-│   │   └── images/                   # Static image assets
-│   │
-│   ├── Components/                   # Reusable UI components
-│   ├── Constants/                    # App-wide constants
-│   ├── Helpers/                      # Utility/helper functions
-│   ├── Layout/                       # Layout components (Navbar, Footer)
-│   ├── Pages/                        # Route-based page views
-│   ├── Redux/                        # Redux setup
-│   │   ├── Slices/                   # Redux slices (e.g., auth, courses)
-│   │   └── store.js                  # Redux store configuration
-│   │
-│   ├── App.jsx                       # Root app component and routes
-│   ├── index.css                     # Tailwind + global styles
-│   └── main.jsx                      # App entry point
-│
-├── .env.example.js                   # Sample environment config
-├── .eslintrc.cjs                     # ESLint configuration
-├── .gitignore                        # Git ignore file
-├── package.json                      # NPM scripts and dependencies
-├── package-lock.json                 # Dependency lock file
-├── postcss.config.js                 # PostCSS setup
-├── tailwind.config.js                # Tailwind configuration
-├── vercel.json                       # Vercel deployment settings
-└── vite.config.js                    # Vite bundler configuration
-
-
-### Backend – `backend/`
-backend/
-├── config/
-│   └── db.config.js                 # MongoDB connection configuration
-│
-├── controllers/                     # Business logic and route handlers
-│   ├── course.controller.js         # Course-related logic
-│   ├── miscellaneous.controller.js  # Miscellaneous features
-│   └── user.controller.js           # User auth and profile management
-│
-├── middleware/                      # Express middleware functions
-│   ├── auth.middleware.js           # Auth and role checking
-│   ├── error.middleware.js          # Error handler
-│   └── multer.middleware.js         # File upload handling
-│
-├── models/                          # Mongoose models
-│   ├── course.model.js              # Course schema
-│   └── user.model.js                # User schema
-│
-├── routes/                          # API route definitions
-│   ├── course.routes.js             # Routes for courses
-│   ├── miscellaneous.routes.js      # Routes for misc endpoints
-│   └── user.routes.js               # Routes for user/auth
-│
-├── utils/                           # Utility functions
-│   ├── error.utils.js               # Custom error classes
-│   └── sendEmail.js                 # Email sending logic
-│
-├── .env.example.js                  # Sample environment configuration
-├── .gitignore                       # Git ignored files
-├── app.js                           # Express app setup (middleware, routes)
-├── package.json                     # Project metadata and dependencies
-├── package-lock.json                # Dependency lock file
-└── server.js                        # App entry point (DB connect, listen)
-
+└── server/                     # Backend API (Node + Express)
+    ├── config/                 # Database connection & Env setup
+    ├── models/                 # Mongoose Schemas (User, Course)
+    ├── routes/                 # API Endpoint definitions
+    ├── controllers/            # Business logic & Request handling
+    ├── middleware/             # Auth checks, Error handling, Multer
+    ├── utils/                  # Helper modules (Emailer, Error Class)
+    └── server.js               # Entry point
 ```
-## 🎯 Objectives
+## Objectives
 
 - Centralize online education for students
 - Streamline scheduling and access to learning materials
@@ -111,7 +61,7 @@ backend/
 
 ---
 
-## 🧠 Future Enhancements
+## Future Enhancements
 
 - Student-instructor interaction
 - chatBot system
@@ -119,6 +69,6 @@ backend/
 
 ---
 
-## 📝 Conclusion
+## Conclusion
 
 **EduNoww App** provides an effective solution for digital learning, combining robust backend support with a user-friendly frontend. It aims to be a scalable and impactful LMS platform.

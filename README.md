@@ -1,3 +1,8 @@
+
+# What's inside?
+
+Please refer [Edunoww-Upgrade](https://github.com/mohith0407/edunoww-upgrade) repo as i created the new repo and added all features
+---
 # 🎓 EduNoww – Learning Management System (LMS)
 
 **EduNoww** is a scalable Learning Management System built on the **MERN Stack**. It is designed to bridge the gap between instructors and students through a seamless, interactive course delivery platform.
